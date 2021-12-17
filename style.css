@@ -1,0 +1,267 @@
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: #E78F03;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* Styling af navigationsbar*/
+
+.nav{
+    border-bottom: 1px solid #4A3C8D;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    background-color: #4A3C8D;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.5vw;
+
+}
+
+
+.menu{
+    margin:0 30px 0 0;
+    display: inline-block;
+
+}
+
+.menu a{
+    clear: right;
+    text-decoration: none;
+    color:#E78F03;
+    margin: 0 10px;
+    line-height: 70px;
+    transition: all .5s ease;
+    padding: 0.6vw;
+
+}
+
+.menu a:hover{
+    background-color: #E78F03;
+    box-shadow: 0 0 1vw #E78F03;
+    color:#4A3C8D;
+    border-radius: 0.5vw;
+}
+
+
+
+label{
+    margin: 0 40px 0 0;
+    font-size: 6vw;
+    line-height: 70px;
+    display:none;
+    width: 26px;
+    float: right;
+    color:#E78F03
+}
+
+#toggle{
+    display:none;
+}
+
+
+
+/* For at navigationen er responsiv til mobil */
+
+@media only screen and (max-width: 500px){
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: #4A3C8D;
+        font-size: 6vw;
+        font-family: 'Karla', sans-serif;
+        position: absolute;
+
+    }
+    .menu a{
+        display: block;
+        border-bottom: 1px solid #4A3C8D;
+        margin: 0;
+    }
+
+    #toggle:checked + .menu{
+        display: block;
+    }
+}
+
+
+
+/* Styling af 'Forside' */
+
+.home{
+    color: black;
+    font-family: 'Karla', sans-serif; 
+}
+
+
+.home h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+.home p{
+    font-size: 30px;
+    text-align: center;
+}
+
+.home img{
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+
+
+/* Styling af 'Hvad jeg kan tilbyde?' */
+
+.hvad-kan-jeg-tilbyde {
+    background-color:black;
+    color:#4A3C8D;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    padding: 6vw;
+    
+    
+}
+
+.hvad-kan-jeg-tilbyde h2{
+    font-size: 40px;
+    margin-top: 3.4vw;
+}
+
+.hvad-kan-jeg-tilbyde h3{
+    font-size: 20px;
+}
+.services {
+    color:white;
+    
+    margin-bottom: 50px ;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+
+
+.services {
+    margin-bottom: 4em;
+}
+
+
+
+
+/* Styling af 'Hvem er jeg?' */
+
+.hvem-er-jeg {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hvem-er-jeg img{
+    box-shadow: 0 0 1vw black;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.hvem-er-jeg h1{
+    font-family: 'Karla', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.hvem-er-jeg_body p{
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    padding: 80px;
+}
+
+
+
+
+/* Styling af 'Portfolio' */
+
+.minportfolio{
+    background-color: black;
+}
+
+.minportfolio h2{
+    font-family: 'Karla', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #4A3C8D;
+    padding: 6vw;
+
+}
+
+
+.portfoliobilleder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+
+}
+
+.portfolio__item {
+    background: black;
+    overflow: hidden;
+    
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+        max-width: 100%;
+        max-height: 100%;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.1);
+
+
+}
+
+ 
+
+/* Styling af 'Kontakt' */
+
+#kontakt h1, p{
+    font-family: 'Karla', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+/* Styling af 'Footer' */
+
+.footer{
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Karla', sans-serif;
+}
